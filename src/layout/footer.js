@@ -1,42 +1,68 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './footer.css'
 import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
-import {AiFillEye} from 'react-icons/ai'
-import {FaHandshake} from 'react-icons/fa'
-import {FiHelpCircle} from 'react-icons/fi'
+import { AiFillEye } from 'react-icons/ai'
+import { FaHandshake } from 'react-icons/fa'
+import { FiHelpCircle } from 'react-icons/fi'
+import { AiFillFacebook } from 'react-icons/ai'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { AiOutlineInstagram } from 'react-icons/ai'
 
-const footer = () => {
+const Footer = () => {
+    const [show,setShow] = useState(false)
+    const showItem = (e) =>{
+        e.preventDefault()
+        setShow(!show)
+    }
     return (
         <>
-        <hr/>
-            <Row xs={1} sm={2} md={3} mt={5} className="center">
-                <Col  xs={{ span: 6, offset: 3 }}>  
-                    <span>FOOD.</span>
-                    <span>VAULT</span>
+            <hr />
+            <Row xs={1} sm={2} md={3} className="center">
+                <Col >
+                    <div className="footer-main">
+
+                        <span className='first'>FOOD.</span>
+                        <span>VAULT</span>
+                    </div>
                 </Col>
                 <Row xs={1} md={3}>
-                <Col  xs={{ span: 6, offset: 5 }}>
-
-                    <a href="" > <AiFillEye/> about</a>
-                </Col>
-                <Col  xs={{ span: 6, offset: 5 }}>
-                    <a href=""> <FaHandshake/> contact</a>
-                </Col>
-                <Col  xs={{ span: 6, offset: 5 }}>
-                    <a href=""> <FiHelpCircle/> help</a>
-                </Col>
+                    <Col >
+                        <a href="" > <AiFillEye className='icon'  /> about</a>
+                    </Col>
+                    <Col >
+                        <a href=""> <FaHandshake className='icon'  /> contact</a>
+                    </Col>
+                    <Col  >
+                        <a href=""> <FiHelpCircle className='icon'  /> help</a>
+                    </Col>
                 </Row>
-                <Col  xs={{ span: 6, offset: 4 }}>medium</Col>
+                <Col >
+                    <div className='soc'>
+                        <a href="" className='social' onClick={showItem}>
+                            <i><AiFillFacebook className='icon' /></i>
+                        </a>
+                        <a href="" className='social'>
+                            <i><AiOutlineInstagram className='icon' /></i>
+                        </a>
+                        <a href="" className='social'>
+                            <i><AiFillTwitterCircle className='icon' /></i>
+                        </a>
+                    </div>
+                </Col>
             </Row>
             <hr className='hr' />
-                <div className='copyright'>
-                    <p>
-                        Copyright © 2022 • Team Drive
-                    </p>
-                </div>
+            <div className='copyright'>
+                <p>
+                    Copyright © 2022 • Team Drive
+                </p>
+            </div>
+
+            <div className={`${show?'bliss':'none'}`}>
+                nxjkznnjbdskjl nskdnvldnj sbcjkbskdbcksbc ksdcb skbc
+            </div>
         </>
     )
 }
 
-export default footer
+export default Footer
