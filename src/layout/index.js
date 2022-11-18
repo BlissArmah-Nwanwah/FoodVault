@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbars from './navbar'
+import Footer from './footer'
 import Container from 'react-bootstrap/Container';
 
 const Layout = ({ children }) => {
@@ -8,6 +9,7 @@ const Layout = ({ children }) => {
       <Navbars />
       <Container className='content'>
         {children}
+      <Footer/>
       </Container>
     </>
   )

@@ -19,7 +19,7 @@ const Index = () => {
   return (
     <>
       <h1 className='text'>product</h1>
-    <Row xs={1} md={2} className="g-4">
+    <Row xs={1} sm={2} md={3}  className="g-4">
 
         
     {Array.from({ length: 7 }).map((_, idx) => (
