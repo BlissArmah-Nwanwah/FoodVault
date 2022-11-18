@@ -1,0 +1,31 @@
+
+    hr {
+        margin-bottom: 2rem;
+        background-color: black;
+        border-radius: 10px;
+        height: 2px;
+        border: none;
+    }
+
+    .hr {
+        margin-top: 2rem;
+        margin-bottom: 32px;
+        background-color: #32CD32;
+        border-radius: 10px;
+        height: 2px;
+        border: none;
+    }
+    .copyright {
+        text-align: center;
+        color: #0A142F;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
+    .center{
+        /* background: red; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
