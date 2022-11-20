@@ -3,19 +3,19 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import './style.css'
+import Loading from "../Loading/Loading"
 import axios from "axios"
+import { useGlobalContext } from '../../context';
+
 
 
 const Index = () => {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        const url = 'https://opentdb.com/api.php?amount=20&category=21&difficulty=medium&type=multiple'
-        axios.get(url)
-            .then((res) => {
-                setData(res.data.results)
-            })
-            .catch((err) => console.log(err))
-    }, [])
+  const [data, setData] = useState([])
+  const { loading } = useGlobalContext()
+  if (loading) {
+    return <Loading/>
+  }
+   
   return (
     <>
       <h1 className='text'>product</h1>

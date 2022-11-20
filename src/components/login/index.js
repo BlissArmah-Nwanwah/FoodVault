@@ -35,8 +35,9 @@ const Login = () => {
         </Col>
       </Row>
     </Form> */}
-    <form>
-  {/* <!-- Email input --> */}
+      <Row xs={1} md={2} className='justify-content-center mt-5 ' >
+      <form>
+      {/* <!-- Email input --> */}
   <div className="form-outline mb-4">
     <input type="email" id="form1Example1" className="form-control" />
     <label className="form-label" for="form1Example1">Email address</label>
@@ -53,20 +54,21 @@ const Login = () => {
     <div className="col d-flex justify-content-center">
       {/* <!-- Checkbox --> */}
       <div className="form-check">
-        <input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-        <label className="form-check-label" for="form1Example3"> Remember me </label>
+      <Link to={'/signup'}>Dont have an account? SignUp</Link>
       </div>
     </div>
 
     <div className="col">
-      {/* <!-- Simple link --> */}
-      <a href="#!">Forgot password?</a>
+    {/* <!-- Simple link --> */}
+    <a href="#!">Forgot password?</a>
     </div>
-  </div>
-
-  {/* <!-- Submit button --> */}
-  <button type="submit" className="btn btn-primary btn-block">Sign in</button>
-</form>
+          </div>
+          
+    
+    {/* <!-- Submit button --> */}
+    <button type="submit" className="btn btn-primary btn-block">Sign in</button>
+    </form>
+    </Row>
             </>
   );
 }

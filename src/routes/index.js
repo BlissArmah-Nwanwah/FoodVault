@@ -4,6 +4,7 @@ import HomePage from '../pages/home'
 import LoginPage from '../pages/login'
 import ProductsPage from '../pages/products'
 import SignupPage from '../pages/signup'
+import Error from '../pages/error'
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
       <Route path='/products' element={<ProductsPage />} />
       <Route path='/about' element={<ProductsPage />} />
       <Route path='/signup' element={<SignupPage />} />
+      <Route path='*' element={<Error />} />
     </Routes>
   )
 }

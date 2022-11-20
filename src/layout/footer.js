@@ -10,15 +10,11 @@ import { AiFillTwitterCircle } from 'react-icons/ai'
 import { AiOutlineInstagram } from 'react-icons/ai'
 
 const Footer = () => {
-    const [show,setShow] = useState(false)
-    const showItem = (e) =>{
-        e.preventDefault()
-        setShow(!show)
-    }
+    
     return (
-        <>
+        <div className='footer'>
             <hr />
-            <Row xs={1} sm={2} md={3} className="center">
+            <Row xs={3}  className="center  " >
                 <Col >
                     <div className="footer-main">
 
@@ -26,7 +22,7 @@ const Footer = () => {
                         <span>VAULT</span>
                     </div>
                 </Col>
-                <Row xs={1} md={3}>
+                <Row xs={3} >
                     <Col >
                         <a href="" > <AiFillEye className='icon'  /> about</a>
                     </Col>
@@ -39,7 +35,7 @@ const Footer = () => {
                 </Row>
                 <Col >
                     <div className='soc'>
-                        <a href="" className='social' onClick={showItem}>
+                        <a href="" className='social' >
                             <i><AiFillFacebook className='icon' /></i>
                         </a>
                         <a href="" className='social'>
@@ -58,10 +54,8 @@ const Footer = () => {
                 </p>
             </div>
 
-            <div className={`${show?'bliss':'none'}`}>
-                nxjkznnjbdskjl nskdnvldnj sbcjkbskdbcksbc ksdcb skbc
-            </div>
-        </>
+            
+        </div>
     )
 }
 
