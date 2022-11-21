@@ -9,9 +9,11 @@ const Navbars = () => {
   return (
     <Navbar expand="lg" >
       <Container className='nav fluid'>
+        <Link to='/'>
         <Navbar.Brand href="#home" > <a className='logo-btn'>
-          <span className="greener">FOOD.</span><span className="g">VAULT</span>
+        <span className="greener">FOOD.</span><span className="g">VAULT</span>
         </a></Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse  id="basic-navbar-nav">
           <Nav className="me-auto move" >

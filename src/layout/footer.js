@@ -8,6 +8,7 @@ import { FiHelpCircle } from 'react-icons/fi'
 import { AiFillFacebook } from 'react-icons/ai'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 import { AiOutlineInstagram } from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
     
@@ -16,11 +17,13 @@ const Footer = () => {
             <hr />
             <Row xs={3}  className="center  " >
                 <Col >
+                    <Link to='/'>
                     <div className="footer-main">
-
-                        <span className='first'>FOOD.</span>
-                        <span>VAULT</span>
+                    
+                    <span className='first'>FOOD.</span>
+                    <span>VAULT</span>
                     </div>
+                    </Link>
                 </Col>
                 <Row xs={3} >
                     <Col >
