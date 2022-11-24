@@ -15,7 +15,7 @@ const Index = () => {
   const password = useRef()
   const [showHome,setShowHome] = useState(false)
 
-  const localSignUp = localStorage.getItem('signup') 
+  const  localSignUp = localStorage.getItem('signup') 
 
 useEffect(()=>{
   if(localSignUp){
