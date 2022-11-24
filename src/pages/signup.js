@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Login from '../components/signup'
+import SignUp from '../components/signup'
 
 
 const SignupPage = () => {
@@ -12,7 +12,7 @@ const SignupPage = () => {
     
     return (
         
-          <Login/>
+          <SignUp/>
        
     )
 }
