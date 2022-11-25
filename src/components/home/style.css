@@ -3,3 +3,14 @@
     text-transform: capitalize;
     text-align: center;
 }
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+button{
+    background: green;
+    border-radius: 1rem;
+    color: white;
+}
