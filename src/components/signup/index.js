@@ -6,9 +6,27 @@ import Col from 'react-bootstrap/Col';
 import Home from '../home'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-
+import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
+import {auth} from '../../firebase-config'
 
 const Index = () => {
+
+  const [registerEmail,setRegisterEmail] = useState('')
+  const [registerPassword,setRegisterPassword] = useState('')
+
+
+  const register = async () =>{
+    try {
+     
+      const user = createUserWithEmailAndPassword(auth,registerEmail,registerPassword )
+      console.log(user)
+    } catch (error) {
+      console.log(error.message)
+    }
+
+  }
+
+ 
 
   
   return (
@@ -17,7 +35,7 @@ const Index = () => {
     <Row style={{ justifyContent: 'center' }}>
       <h2 style={{ textAlign: 'center'}}>Sign Up</h2>
       <Col sm={12} md={6} lg={4}>
-        <Form.Group className="mb-3" controlId="formBasicName">
+        {/* <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Full name</Form.Label>
           <Form.Control type="name" placeholder="Bliss Amorkor"   />
           
@@ -26,10 +44,10 @@ const Index = () => {
           <Form.Label>Contact</Form.Label>
           <Form.Control type="tel" placeholder="0245856985"  />
           
-        </Form.Group>            
+        </Form.Group>             */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email"  />
+          <Form.Control type="email" placeholder="Enter email" onChange={(event)=>{setRegisterEmail(event.target.value)}} />
           
         </Form.Group>
       </Col>
@@ -39,12 +57,12 @@ const Index = () => {
       <Col sm={12} md={6} lg={4}>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>New Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" placeholder="Password" onChange={(event)=>{setRegisterPassword(event.target.value)}} />
           {/* <Form.Label>Confirm Password</Form.Label>
           <Form.Control type="password" placeholder="Password" ref={password} /> */}
         </Form.Group>
        
-        <Button variant="primary" type="submit" >
+        <Button variant="primary"  onClick={register} >
           Sign Up
         </Button>
       </Col>

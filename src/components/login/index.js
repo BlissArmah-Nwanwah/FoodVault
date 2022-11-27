@@ -1,14 +1,32 @@
-import React,{useRef} from 'react'
+import React,{useRef,useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Link} from 'react-router-dom'
+
 import './styles.css'
+import {signInWithEmailAndPassword} from 'firebase/auth'
+import {auth} from '../../firebase-config'
+
 
 
 const Login = () => {
+
+  const [registerEmail,setRegisterEmail] = useState('')
+  const [registerPassword,setRegisterPassword] = useState('')
+  const [loginEmail,setLoginEmail] = useState('')
+  const [loginPassword,setLoginPassword] = useState('')
   
+  const login = async () =>{
+    try {
+     
+      const user = signInWithEmailAndPassword(auth,loginEmail,loginPassword )
+      console.log(user)
+    } catch (error) {
+      console.log('wrong input hahaha')
+    }
+  }
   return (
     <>
     {/* <Form>
@@ -40,13 +58,13 @@ const Login = () => {
       <form>
       {/* <!-- Email input --> */}
   <div className="form-outline mb-4">
-    <input type="email" id="form1Example1" className="form-control" />
+    <input type="email" id="form1Example1" className="form-control" onChange={(event)=>{setRegisterEmail(event.target.value)}}/>
     <label className="form-label" for="form1Example1">Email address</label>
   </div>
 
   {/* <!-- Password input --> */}
   <div className="form-outline mb-4">
-    <input type="password" id="form1Example2" className="form-control" />
+    <input type="password" id="form1Example2" className="form-control" onChange={(event)=>{setRegisterPassword(event.target.value)}} />
     <label className="form-label" for="form1Example2">Password</label>
   </div>
 
@@ -67,7 +85,10 @@ const Login = () => {
           
     
     {/* <!-- Submit button --> */}
-    <button type="submit" className="btn btn-primary btn-block" >Sign in</button>
+    {/* <button className="btn btn-primary btn-block" onClick={login} >Sign in</button> */}
+    <Button variant="primary"  onClick={login} >
+          Sign in
+        </Button>
     </form>
     </Row>
             </>
