@@ -7,20 +7,25 @@ import { useGlobalContext } from '../../context';
 import Row from 'react-bootstrap/Row';
 import {auth} from '../../firebase-config'
 import {onAuthStateChanged, signOut} from 'firebase/auth'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 const Index = () => {
-
-  const [user,setUser] = useState({})
-  onAuthStateChanged(auth, (currentUser)=>{
-    setUser(currentUser)
-  })
-
-
-  const { loading,data } = useGlobalContext()
+  const navigate = useNavigate()
+  const { loading,data,user,logout } = useGlobalContext()
+  const handleLogout = async () =>{
+      try {
+        await logout()
+        navigate('/')
+        console.log('you are logged out')
+      } catch (e) {
+        console.log(e.message)
+        
+      }
+  }
   if (loading) {
     return <Loading/>
   }
@@ -32,15 +37,13 @@ const Index = () => {
      )
    }
 
-   const logout = async()=>{
-    await signOut(auth)
-   }
+  
    
   return (
     <>
       <h1 className='text'>product</h1>
-      {user?.email}
-      <button onClick={logout} >signout</button>
+     <p>user Email: {user?.email}</p> 
+      <button onClick={handleLogout} >signout</button>
       
       <Row xs={1} sm={2} md={3} className="g-4" >
       {
