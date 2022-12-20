@@ -9,6 +9,7 @@ import axios from 'axios'
 import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import {auth} from '../../firebase-config'
 import { useGlobalContext } from '../../context';
+import './signup.css'
 
 const Index = () => {
   const {createUser} = useGlobalContext()
@@ -37,30 +38,15 @@ const Index = () => {
   
   return (
    
-    <Form >
-      <h1 className="form-header">Already have an account? <Link to='/login'>SignIn  </Link></h1>
-    <Row style={{ justifyContent: 'center' }}>
-      <h2 style={{ textAlign: 'center'}}>Sign Up</h2>
+    <Form className='form' >
       <Col sm={12} md={6} lg={4}>
-        {/* <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Label>Full name</Form.Label>
-          <Form.Control type="name" placeholder="Bliss Amorkor"   />
-          
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicNumber">
-          <Form.Label>Contact</Form.Label>
-          <Form.Control type="tel" placeholder="0245856985"  />
-          
-        </Form.Group>             */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}} />
           
         </Form.Group>
       </Col>
-    </Row>
 
-    <Row style={{ justifyContent: 'center' }}>
       <Col sm={12} md={6} lg={4}>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>New Password</Form.Label>
@@ -69,11 +55,11 @@ const Index = () => {
           <Form.Control type="password" placeholder="Password" ref={password} /> */}
         </Form.Group>
        
+      <h1 className="form-header">Already have an account? <Link to='/login'>SignIn  </Link></h1> 
         <Button variant="primary" onClick={handleSubmit} >
           Sign Up
         </Button>
       </Col>
-    </Row>
   </Form>
     
           
