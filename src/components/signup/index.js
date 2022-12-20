@@ -23,13 +23,11 @@ const Index = () => {
     e.preventDefault()
     setError('')
     try {
-
      await  createUser(email ,password)
      navigate('/')
     } catch (e) {
       setError(e.message)
       console.log(e.message)
-      
     }
 
   }
@@ -40,7 +38,7 @@ const Index = () => {
   return (
    
     <Form >
-      <h1>Already have an account? <Link to='/login'>SignIn  </Link></h1>
+      <h1 className="form-header">Already have an account? <Link to='/login'>SignIn  </Link></h1>
     <Row style={{ justifyContent: 'center' }}>
       <h2 style={{ textAlign: 'center'}}>Sign Up</h2>
       <Col sm={12} md={6} lg={4}>
