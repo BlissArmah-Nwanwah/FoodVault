@@ -23,11 +23,13 @@ const Index = () => {
     e.preventDefault()
     setError('')
     try {
+
      await  createUser(email ,password)
      navigate('/')
     } catch (e) {
       setError(e.message)
       console.log(e.message)
+      
     }
 
   }
