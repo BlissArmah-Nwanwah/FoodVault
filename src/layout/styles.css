@@ -1,7 +1,8 @@
 /* Navbar styles */
 .nav {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
+    background: red;
 }
 
 .move {

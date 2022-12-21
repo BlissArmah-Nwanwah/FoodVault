@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
       <Navbars />
       <Container className='content'>
         {children}
-        
         </Container>
     </>
   )

@@ -1,11 +1,8 @@
-import React,{useEffect, useRef, useState} from 'react'
+import React,{ useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Home from '../home'
 import {Link,useNavigate} from 'react-router-dom'
-import axios from 'axios'
 import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import {auth} from '../../firebase-config'
 import { useGlobalContext } from '../../context';
@@ -22,7 +19,7 @@ const Index = () => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
-    setError('')
+    setError('') 
     try {
      await  createUser(email ,password)
      navigate('/')

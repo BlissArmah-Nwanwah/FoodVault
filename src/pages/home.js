@@ -5,8 +5,8 @@ import Footer from '../layout/footer'
 const HomePage = () => {
   return (
     <>
-    <Home />
-    <Footer/>
+      <Home />
+      <Footer/>
     </>
   )
 }

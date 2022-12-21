@@ -1,7 +1,7 @@
 .footer{
-    clear: both;
-    position: relative;
-    margin-bottom: -62200px;
+  
+    /* height: auto; */
+    /* width: 100%; */
 
 }
 
@@ -40,7 +40,7 @@ hr {
 .footer-main {
     color: #32CD32;
     font-size: 25px;
-    font-weight: ;
+    /* font-weight: ; */
 }
 
 .first {

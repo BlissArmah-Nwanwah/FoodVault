@@ -15,7 +15,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <hr />
-            <Row xs={3}  className="center  " >
+        <Row xs={3}  className="center  " >
                 <Col >
                     <Link to='/'>
                     <div className="footer-main">

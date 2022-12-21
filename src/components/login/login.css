@@ -1,12 +1,18 @@
 .forms{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    padding: 30px;
+}
+.img-container{
+    border-radius: 5px;
+
 }
 .img-container>img{
     width: 504px;
-    height: 500px;
+    height: 600px;
+    border-radius: 5px;
     object-fit: cover;
 
 }
@@ -17,11 +23,14 @@
     align-items: center;
 }
 form{
-    border: 1px solid;
     width: 600px;
     height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.inp{
+    width: 50%;
 }

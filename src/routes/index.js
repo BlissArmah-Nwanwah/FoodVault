@@ -11,7 +11,7 @@ import Add from  '../pages/add'
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<ProtectiveRoute> <HomePage /></ProtectiveRoute>} />
+      <Route path='/' element={<ProtectiveRoute><HomePage /></ProtectiveRoute>} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/products/:id' element={<ProductsPage />} />
       <Route path='/signup' element={<SignupPage />} />

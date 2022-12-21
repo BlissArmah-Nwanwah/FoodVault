@@ -2,13 +2,12 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './styles.css'
 import { Link } from 'react-router-dom'
 const Navbars = () => {
   return (
-    <Navbar expand="lg" >
-      <Container className='nav fluid'>
+    <nav expand="lg" className='' >
+      <Container className='nav'>
         <Link to='/'>
         <Navbar.Brand href="#home" > <a className='logo-btn'>
         <span className="greener">FOOD.</span><span className="g">VAULT</span>
@@ -32,7 +31,7 @@ const Navbars = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </nav>
   );
 }
 

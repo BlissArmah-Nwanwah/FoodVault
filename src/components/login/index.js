@@ -1,8 +1,5 @@
 import React,{useRef,useState} from 'react'
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import {Link,useNavigate} from 'react-router-dom'
 import { useGlobalContext } from '../../context';
 import Image from '../../Assets/login.jpg'
@@ -37,19 +34,19 @@ const Login = () => {
 
       <form >
         
-  <div className="form-outline mb-4">
-    <input type="email" id="form1Example1" className="form-control inp" onChange={(e)=> setEmail(e.target.value)}/>
+  <div className="mb-4 inp">
     <label className="form-label" for="form1Example1">Email address</label>
+    <input type="email" id="form1Example1" className="form-control " onChange={(e)=> setEmail(e.target.value)}/>
   </div>
 
-  <div className="form-outline mb-4">
-    <input type="password" id="form1Example2" className="form-control inp" onChange={(e)=> setPassword(e.target.value)}  />
+  <div className="mb-4 inp">
     <label className="form-label" for="form1Example2">Password</label>
+    <input type="password" id="form1Example2" className="form-control" onChange={(e)=> setPassword(e.target.value)}  />
 
     
   </div>
 
-  <div className="mb-2 login-footer">
+  <div className="login-footer">
     
       <Link to={'/signup'}>Dont have an account?</Link>
       
