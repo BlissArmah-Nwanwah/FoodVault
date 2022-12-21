@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Link,useNavigate} from 'react-router-dom'
 import { useGlobalContext } from '../../context';
+import Image from '../../Assets/login.jpg'
 import './login.css'
 
 
@@ -29,16 +30,17 @@ const Login = () => {
     }
   }
   return (
-    <>
-      <Row xs={1} md={2} className=' mt-5 form ' >
+      <div className='forms' >
+        <div className="img-container">
+        <img src={Image} alt="" />
+        </div>
+        
       <form >
-      {/* <!-- Email input --> */}
   <div className="form-outline mb-4">
     <input type="email" id="form1Example1" className="form-control inp" onChange={(e)=> setEmail(e.target.value)}/>
     <label className="form-label" for="form1Example1">Email address</label>
   </div>
 
-  {/* <!-- Password input --> */}
   <div className="form-outline mb-4">
     <input type="password" id="form1Example2" className="form-control inp" onChange={(e)=> setPassword(e.target.value)}  />
     <label className="form-label" for="form1Example2">Password</label>
@@ -56,8 +58,7 @@ const Login = () => {
           
         
     </form>
-    </Row>
-            </>
+    </div>
   );
 }
 

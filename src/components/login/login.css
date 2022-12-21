@@ -1,20 +1,18 @@
-.form{
-    /* background: red; */
-    height: 85vh!important;
+.forms{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.inp{
-    border-bottom: 2px solid rgb(35, 33, 33) !important;
-    border-radius: 0px !important;
-    width: 50% !important;
 }
 
+.img-container>img{
+    width: 504px;
+    height: 70%;
+    object-fit: cover;
 
-
+}
 .login-footer{
     width: 50%;
     display: flex;
     justify-content: space-between;
+}
+form{
+    border: 1px solid;
 }
